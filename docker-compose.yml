@@ -9,7 +9,7 @@ services:
       - ./wp-content:/var/www/html/wp-content
     environment:
       WORDPRESS_DB_HOST: db:3306
-      WORDPRESS_DB_PASSWORD: passwd
+      WORDPRESS_DB_PASSWORD: wppasswd
     ports:
       - 80:80
       - 443:443
@@ -21,7 +21,7 @@ services:
     volumes:
       - db_data:/var/lib/mysql
     environment:
-      MYSQL_ROOT_PASSWORD: passwd
+      MYSQL_ROOT_PASSWORD: mysqlpasswd
     networks:
       - back
   phpmyadmin:
@@ -33,7 +33,7 @@ services:
       - 8080:80
     environment:
       PMA_HOST: db
-      MYSQL_ROOT_PASSWORD: passwd
+      MYSQL_ROOT_PASSWORD: mysqlpasswd
     networks:
       - back
 networks:
