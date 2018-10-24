@@ -1,19 +1,33 @@
 version: "3"
 services:
-  web:
-    # replace username/repo:tag with your name and image details
-    image: username/repo:tag
-    deploy:
-      replicas: 5
-      resources:
-        limits:
-          cpus: "0.1"
-          memory: 50M
-      restart_policy:
-        condition: on-failure
+  wp:
+    image: wordpress
+    #deploy:
+    #  replicas: 5
+    #  resources:
+    #    limits:
+    #      cpus: "0.1"
+    #      memory: 50M
+    #  restart_policy:
+    #    condition: on-failure
+    volumes:
+      - ./wp-content:/var/www/html/wp-content
+    environment:
+      WORDPRESS_DB_HOST: db:3306
+      WORDPRESS_DB_PASSWORD: passwd
     ports:
-      - "4000:80"
+      - 80:80
+      - 443:443
     networks:
-      - webnet
+      - wpnet
+  db:
+    image: mysql
+    #restart: always
+    volumes:
+      - db_data:/var/lib/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: passwd
+    networks:
+      -wpnet
 networks:
-  webnet:
+  wpnet:
