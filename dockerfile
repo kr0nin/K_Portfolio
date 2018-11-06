@@ -1,2 +1,3 @@
 FROM wordpress:latest
-EXPOSE 8000:80
+
+# EXPOSE 8000:80
