@@ -45,6 +45,7 @@ services:
       - back
 
 volumes:
-  sdb_data:
+  db_data:
+  wp-content:
 networks:
   back:
