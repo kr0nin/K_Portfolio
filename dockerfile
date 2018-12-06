@@ -1,3 +1,9 @@
+#
+# Dockerfile for kportfolio wordpress install
+#
+
 FROM wordpress:latest
 
-# EXPOSE 8000:80
+#MAINTAINER erich.kroneberge@gmail.com
+
+EXPOSE 8000:80
