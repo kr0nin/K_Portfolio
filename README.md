@@ -3,8 +3,7 @@ Docker_WP_docker-compose files
 Eventually to be used for a Portainer deployment template
 
 KPPP – Kroneberger Professional Portfolio Project
-Portfolio Project
-CV/Project website
+Portfolio Project + CV/Project website
 
 Kroneberger.org
 Cloudflare Caching
@@ -38,7 +37,8 @@ Docker Docs
 Portainer
 	Install Instructions
 	Portainer `docker start portainer`
-	Coyote - localhost:9000
+
+  Coyote - localhost:9000
 
 Wordpress
 	DockerHub Repo - DjinnBottle kr0nin/djinn
