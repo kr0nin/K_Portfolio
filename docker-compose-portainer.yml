@@ -32,7 +32,7 @@ services:
       - 21:21
     restart: always
     volumes:
-      - - /Users/erichkroneberger/Desktop/wp-content:/var/www/html/wp-content
+      - /Users/erichkroneberger/Desktop/wp-content:/var/www/html/wp-content
     environment:
       WORDPRESS_DB_HOST: db:3306
       MYSQL_ROOT_PASSWORD: dbrootpass
