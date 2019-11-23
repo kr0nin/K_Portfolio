@@ -29,7 +29,7 @@ services:
     ports:
       - 80:80
       - 443:443
-      - 21:21
+      - 9998:21
     restart: always
     volumes:
       - /kportfolio/wp-content:/var/www/html/wp-content
